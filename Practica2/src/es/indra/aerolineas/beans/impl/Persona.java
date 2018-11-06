@@ -2,17 +2,20 @@
 
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.beans.impl;
 
 /**
  * @author P.era-1
  *
  */
-public class Persona {
+//abstract no deja crear un objeto de esta clase
+public abstract class Persona {
 	protected String nombre;
 	protected String dni;
 	protected String apellido;
 	protected int id;
+	
+	public abstract String soliciarInformacion();
 	
 	public int getId() {
 		return id;
