@@ -1,4 +1,5 @@
 /**
+
  * 
  */
 package es.indra.aerolineas.sevices;
@@ -14,17 +15,23 @@ import java.util.List;
  *
  */
 public class ReadJFile {
+	
+	int a = 10;
 
-	public void retornarVuelos() {
+	public List<String> retornarVuelos() {
 		Path path = Paths.get("/repos/CursoJava/vuelos.txt");
+		
+		List<String> contenido = null;
+		
 		try {
 
-			List<String> contenido = Files.readAllLines(path);
-			System.out.println(contenido);;
+			contenido = Files.readAllLines(path);
+			return contenido;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return contenido;
 
 	}
 

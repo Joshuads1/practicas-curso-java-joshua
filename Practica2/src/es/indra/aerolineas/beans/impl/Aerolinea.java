@@ -3,7 +3,14 @@
  */
 package es.indra.aerolineas.beans.impl;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 import es.indra.aerolineas.beans.IAerolinea;
+import es.indra.aerolineas.sevices.*;
 
 /**
  * @author josejarizav
@@ -56,12 +63,20 @@ public class Aerolinea implements IAerolinea {
 	 * es.indra.aerolineas.beans.impl.IAerolinea#consultarVuelos(java.lang.String,
 	 * java.lang.String)
 	 */
-	@Override
+//	@Override
+//	public void consultarVuelos(String origen, String destino) {
+//		System.out.println("metodo de 2 parametro:%s y %s");
+//
+//	}
+	//prueba----------------------------------------------
 	public void consultarVuelos(String origen, String destino) {
-		System.out.println("metodo de 2 parametro:%s y %s");
+	
+		ReadJFile r = new ReadJFile();
+		List<String> lista = r.retornarVuelos();
+		
 
 	}
-
+	//prueba-----------------------------------------------------
 	/*
 	 * (non-Javadoc)
 	 * 
