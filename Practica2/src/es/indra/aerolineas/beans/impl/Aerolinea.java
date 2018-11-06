@@ -11,17 +11,13 @@ import es.indra.aerolineas.beans.IAerolinea;
  *
  */
 public class Aerolinea implements IAerolinea {
-	
+
 	private int id;
 	private String nombre;
 	private Vuelo[] vuelos = new Vuelo[10];
-	
 
-	
-	public Aerolinea() {	
+	public Aerolinea() {
 	}
-	
-	
 
 	/**
 	 * @param id
@@ -35,40 +31,48 @@ public class Aerolinea implements IAerolinea {
 		this.vuelos = vuelos;
 	}
 
-	//public Vuelo[] consultarVuelos(String origen) {
-	//	return this.vuelos;
-	//}
-	//public Vuelo[] consultarVuelos(String origen, String destino) {
-		//return this.vuelos;
-	//}
-	
-	
-	/* (non-Javadoc)
-	 * @see es.indra.aerolineas.beans.impl.IAerolinea#consultarVuelos(java.lang.String)
+	// public Vuelo[] consultarVuelos(String origen) {
+	// return this.vuelos;
+	// }
+	// public Vuelo[] consultarVuelos(String origen, String destino) {
+	// return this.vuelos;
+	// }
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * es.indra.aerolineas.beans.impl.IAerolinea#consultarVuelos(java.lang.String)
 	 */
 	@Override
 	public void consultarVuelos(String origen) {
-	System.out.println("metodo de 1 parametro:".concat(origen));
+		System.out.println("metodo de 1 parametro:".concat(origen));
 	}
-	/* (non-Javadoc)
-	 * @see es.indra.aerolineas.beans.impl.IAerolinea#consultarVuelos(java.lang.String, java.lang.String)
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * es.indra.aerolineas.beans.impl.IAerolinea#consultarVuelos(java.lang.String,
+	 * java.lang.String)
 	 */
 	@Override
 	public void consultarVuelos(String origen, String destino) {
 		System.out.println("metodo de 2 parametro:%s y %s");
-	
+
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see es.indra.aerolineas.beans.impl.IAerolinea#anularVuelos(java.lang.String)
 	 */
 	@Override
 	public void anularVuelos(String... vuelos) {
 		System.out.println("numero de vuelos a anular:" + vuelos.length);
-		
+
 	}
-	
-			
-			
+
 	public int getId() {
 		return id;
 	}
@@ -77,6 +81,7 @@ public class Aerolinea implements IAerolinea {
 		this.id = id;
 	}
 
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -85,6 +90,7 @@ public class Aerolinea implements IAerolinea {
 		this.nombre = nombre;
 	}
 
+	@Override
 	public Vuelo[] getVuelos() {
 		return vuelos;
 	}
@@ -92,9 +98,5 @@ public class Aerolinea implements IAerolinea {
 	public void setVuelos(Vuelo[] vuelos) {
 		this.vuelos = vuelos;
 	}
-
-	
-	
-	
 
 }
