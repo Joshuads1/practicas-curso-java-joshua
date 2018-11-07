@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import es.indra.aerolineas.beans.IAerolinea;
+import es.indra.aerolineas.exceptions.ErrorLecturaDeVuelosException;
 import es.indra.aerolineas.sevices.*;
 
 /**
@@ -68,15 +69,27 @@ public class Aerolinea implements IAerolinea {
 //		System.out.println("metodo de 2 parametro:%s y %s");
 //
 //	}
-	//prueba----------------------------------------------
+	// prueba----------------------------------------------
 	public void consultarVuelos(String origen, String destino) {
-	
+
 		ReadJFile r = new ReadJFile();
-		List<String> lista = r.retornarVuelos();
+		List<String> listas;
+		try {
+			listas = r.retornarVuelos();
+			if (listas != null && !listas.isEmpty()) {
+				for (String vuelo : listas)
+					System.out.println(vuelo);
+
+			}
+		} catch (ErrorLecturaDeVuelosException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 
 	}
-	//prueba-----------------------------------------------------
+
+	// prueba-----------------------------------------------------
 	/*
 	 * (non-Javadoc)
 	 * 

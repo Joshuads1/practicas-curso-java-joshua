@@ -3,6 +3,7 @@
  */
 package es.indra.aerolineas.main;
 
+
 import es.indra.aerolineas.beans.IAerolinea;
 import es.indra.aerolineas.beans.impl.Aerolinea;
 import es.indra.aerolineas.beans.impl.Empleado;
@@ -38,6 +39,8 @@ public class Venta {
 		aa.anularVuelos();
 		aa.anularVuelos("mad");
 		aa.anularVuelos("mad","df");
+		
+		
 
 		
 		Empleado emp = new Empleado();
@@ -66,7 +69,6 @@ public class Venta {
 		
 		
 		
-
 	}
 
 }
